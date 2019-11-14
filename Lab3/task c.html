@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 7: Introducing jQuery - Event Object</title>
+    <link rel="stylesheet" href="css/c07.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+<script src="js/jquery-1.11.0.js"></script>
+  </head>
+<script>
+
+$(document).ready(function(){
+$(window).scroll(function() {
+  var scrollTop = $(window).scrollTop();
+  if ( scrollTop > ($("#footer").offset().top-500-($(window).height())) ) { 
+    $('#addis').show();
+  }
+  else if( scrollTop < ($("#footer").offset().top-500-($(window).height())) ){
+    $('#addis').hide();
+  }
+});
+});
+</script>
+  <body>
+    <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="1" class="hot"><em>fresh</em> figs</li>
+        <li id="2" class="hot">pine nuts</li>
+        <li id="3" class="hot">honey</li>
+        <li id="4">balsamic vinegar</li>
+        <li id="5">balsamic vinegar</li>
+        <li id="6">balsamic vinegar</li>
+        <li id="7">balsamic vinegar</li>
+        <li id="8">balsamic vinegar</li>
+        <li id="9">balsamic vinegar</li>
+        <li id="10">balsamic vinegar</li>
+        <li id="11">balsamic vinegar</li>
+        <li id="12">balsamic vinegar</li>
+        <li id="13">balsamic vinegar</li>
+        <li id="14">balsamic vinegar</li>
+        <li id="15">balsamic vinegar</li> 
+        <li id="16">balsamic vinegar</li>
+        <li id="17">balsamic vinegar</li>
+        <li id="18">balsamic vinegar</li>
+        <li id="19">balsamic vinegar</li>
+        <li id="20">balsamic vinegar</li>
+        <li id="21">balsamic vinegar</li>
+        <li id="22">balsamic vinegar</li>
+
+
+      </ul>
+      <div id="footer">&copy; ListKing</div>
+    </div>
+    <div id="addis" style='display:none; border:solid white; position: fixed; bottom: 0; right: 0; width: 300px; height:100px'>
+      <h1></h1>
+      
+    </div>
+   
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 7: Introducing jQuery - Event Object</title>
+    <link rel="stylesheet" href="css/c07.css" />
+    
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot"><em>fresh</em> figs<span class="date"></span></li>
+        <li id="two" class="hot">pine nuts<span class="date"></span></li>
+        <li id="three" class="hot">honey<span class="date"></span></li>
+        <li id="four">balsamic vinegar<span class="date"></span></li>
+        <p>Click or mouseover a hot item</p>
+      </ul>
+    </div>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("ul li").click(function(){
+         var val= $(this).text();
+        if(val === "fresh figs")
+        {
+          $("p").text("Item: fresh figs")
+
+          $("p").append("<br>Status: available")
+          $("p").append("<br>Event: click")
+        }
+        if(val === "pine nuts")
+        {
+          $("p").text("Item: pine nuts")
+          $("p").append("<br>Status: important")
+          $("p").append("<br>Event: click")
+        }
+        if(val === "honey")
+        {
+          $("p").text("Item: honey")
+          $("p").append("<br>Status: important")
+          $("p").append("<br>Event: click")
+        }
+        if(val === "balsamic vinegar")
+        {
+          $("p").text("Item: balsamic vinegar")
+          $("p").append("<br>Status: available")
+          $("p").append("<br>Event: click")
+        }
+        })
+        $("ul li").mouseover(function(){
+         var val= $(this).text();
+        if(val === "fresh figs")
+        {
+          $("p").text("Item: fresh figs")
+
+          $("p").append("<br>Status: available")
+          $("p").append("<br>Event: mouseover")
+        }
+        if(val === "pine nuts")
+        {
+          $("p").text("Item: pine nuts")
+          $("p").append("<br>Status: important")
+          $("p").append("<br>Event: mouseover")
+        }
+        if(val === "honey")
+        {
+          $("p").text("Item: honey")
+          $("p").append("<br>Status: important")
+          $("p").append("<br>Event: mouseover")
+        }
+        if(val === "balsamic vinegar")
+        {
+          $("p").text("Item: balsamic vinegar")
+          $("p").append("<br>Status: available")
+          $("p").append("<br>Event: mouseover")
+        }
+        })
+      })
+    </script>
+  </body>
+</html>
